@@ -1,0 +1,24 @@
+<Project DefaultTargets="Package" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PropertyGroup>
+		<Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+	</PropertyGroup>
+	<ItemGroup>
+		<Package Include="ExtendType.OfType\ExtendType.OfType.csproj"/>
+		<Specification Include="ExtendType.OfType.nuspec"/>
+		<FrameworkVersion Include="v4.5">
+			<PackagePath>net45</PackagePath>
+		</FrameworkVersion>
+		<FrameworkVersion Include="v4.0">
+			<PackagePath>net40</PackagePath>
+		</FrameworkVersion>
+		<FrameworkVersion Include="v3.5">
+			<PackagePath>net35</PackagePath>
+		</FrameworkVersion>
+	</ItemGroup>
+	<Target Outputs="@(FrameworkVersion.Identity)" Name="Build">
+		<MSBuild Projects="@(Package)" Properties="Configuration=$(Configuration);TargetFrameworkVersion=%(FrameworkVersion.Identity);OutDir=..\lib\%(FrameworkVersion.PackagePath)"/>
+	</Target>
+	<Target Outputs="@(Specification.Identity)" Name="Package" DependsOnTargets="Build">
+		<Exec Command="..\.nuget\nuget.exe pack &quot;%(Specification.Identity)&quot; -OutputDirectory &quot;Packaged&quot;"/>
+	</Target>
+</Project>

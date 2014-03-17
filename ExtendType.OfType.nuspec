@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<language>en-us</language>
+		<id>ExtendType.OfType</id>
+		<version>1.0.0</version>
+		<authors>Scott Wood</authors>
+		<owners>AbstractLabs</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A library of fluent utility extensions for System.Type</description>
+		<summary>A library of fluent utility extensions for System.Type</summary>
+		<projectUrl>https://github.com/ExtendType/OfType</projectUrl>
+		<licenseUrl>https://github.com/ExtendType/OfType/blob/master/LICENSE</licenseUrl>
+		<copyright>AbstractLabs 2014</copyright>
+		<tags>fluent type utility extensions</tags>
+	</metadata>
+	<files>
+		<file src="lib\net45\*.*" target="lib\net45" />
+		<file src="lib\net40\*.*" target="lib\net40" />
+		<file src="lib\net35\*.*" target="lib\net35" />
+	</files>
+</package>
