@@ -3,7 +3,7 @@
 	<metadata>
 		<language>en-us</language>
 		<id>ExtendType.OfType</id>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 		<authors>Scott Wood</authors>
 		<owners>AbstractLabs</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,6 +13,9 @@
 		<licenseUrl>https://github.com/ExtendType/OfType/blob/master/LICENSE</licenseUrl>
 		<copyright>AbstractLabs 2014</copyright>
 		<tags>fluent type utility extensions</tags>
+		<releaseNotes>
+			Fixed issues with data contracts
+		</releaseNotes>
 	</metadata>
 	<files>
 		<file src="lib\net45\*.*" target="lib\net45" />
