@@ -3,7 +3,7 @@
 	<metadata>
 		<language>en-us</language>
 		<id>ExtendType.OfType</id>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 		<authors>Scott Wood</authors>
 		<owners>AbstractLabs</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -14,7 +14,8 @@
 		<copyright>AbstractLabs 2014</copyright>
 		<tags>fluent type utility extensions</tags>
 		<releaseNotes>
-			Fixed issues with data contracts
+			1.0.2 - Fixed bug causing ordinal to be included when member supplied on identification extension
+			1.0.1 - Fixed issues with data contracts
 		</releaseNotes>
 	</metadata>
 	<files>
